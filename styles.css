@@ -173,3 +173,46 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: none;
   }
+
+  .footer {
+    background-color: #1a1a1a;
+    padding: 2rem 0;
+    color: white;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+.copyright {
+    text-align: center;
+    color: #808080;
+    font-size: 0.9rem;
+}

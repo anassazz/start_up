@@ -1,0 +1,175 @@
+.hero-section {
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+    height: 400px;
+    width: 100%;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+.invalid-feedback {
+    display: none;
+}
+
+.is-invalid {
+    border-color: #dc3545;
+}
+
+.is-valid {
+    border-color: #28a745;
+}
+
+/**/
+#booking {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  }
+  
+  #booking h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+  
+  #booking ul li {
+    font-size: 1rem;
+  }
+  
+  #calendar input,
+  #calendar select {
+    max-width: 250px;
+  }
+  
+  .btn-primary {
+    background-color: #e98f21;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #b35f00;
+  }
+  .text-primary{
+    color: #b35f00;
+  }
+ 
+
+  /* Style général pour le cadre */
+ 
+  /* Style général pour le cadre */
+  .comment-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 24px;
+    color: #ddd;
+}
+
+.rating label:before {
+    content: '★';
+}
+
+.rating input:checked ~ label {
+    color: #ffd700;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffd700;
+}
+
+.submit-btn {
+    background-color: #EB5E28;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+}
+
+.submit-btn:hover {
+    background-color: #8257D3;
+}
+
+.recent-comment {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.star-filled {
+    color: #ffd700;
+}
+
+.comment-date {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.success-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: none;
+  }

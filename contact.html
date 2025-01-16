@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404.js - Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+
+<body>
+  <!-- Barre de Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #CCC5B9;">
+    <div class="container-fluid">
+      <!-- Logo and Brand Name -->
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+        ONE HOPE
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-light" href="#" style="font-weight: bold;">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Section Hero avec Vidéo -->
+  <section class="hero-section">
+      <video id="hero-video" autoplay muted loop>
+          <source src="video/video.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content">
+          <div class="container">
+              <h1 data-aos="fade-up">Contactez-nous</h1>
+              <p data-aos="fade-up" data-aos-delay="200">Notre équipe est à votre écoute</p>
+          </div>
+      </div>
+  </section>
+  <!-- Section for Discovery Session Booking -->
+
+  <section class="py-5" id="booking" style="background: linear-gradient(135deg, #1a1a1a, #333); color: #fff;">
+    <div class="container">
+      
+      <div class="row align-items-center" data-aos="fade-up">
+        <div class="col-md-6 text-center mb-4 mb-md-0">
+          <img src="images/logo.png" alt="Marcela Sepulveda" class="rounded-circle shadow" 
+               style="width: 200px; height: 200px; border: 5px solid #fff;">
+          <h2 class="mt-4" style="font-size: 2rem; font-weight: bold;">Get your free Discovery Session!</h2>
+          <p style="font-size: 1.1rem; color: #b3b3b3;">Contact Us to unlock your journey of holistic growth and personal empowerment.</p>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="border p-5 rounded shadow-lg bg-white text-dark" data-aos="zoom-in">
+            <h2 class="text-center mb-4">Discovery Session: Unlock Your Journey</h2>
+            <p class="text-center text-muted">
+              Welcome to your starting point for holistic growth and personal empowerment! Book a 45-minute session with <strong>Marcela Sepulveda</strong>.
+            </p>
+  
+            <div class="booking-details mt-4">
+              <h4 class="text-warning">What to Expect:</h4>
+              <ul class="list-unstyled ps-3">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> A conversation tailored to your unique needs and intentions.</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Exploration of personal and professional goals.</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Introduction to personalized holistic coaching.</li>
+              </ul>
+  
+              <div class="mt-4">
+                <h4 class="text-warning">Session Duration:</h4>
+                <p>45 minutes</p>
+  
+                <h4 class="text-warning">Availability:</h4>
+                <div id="calendar" class="d-flex flex-column flex-sm-row gap-3">
+                  <input type="date" id="bookingDate" class="form-control" required>
+                  <select id="bookingTime" class="form-control" required>
+                    <option value="" selected>Select a Time</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="2:00">2:00 PM</option>
+                    <option value="3:00">3:00 PM</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg mt-4 w-100" onclick="bookSession()">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Section Formulaire et Carte -->
+  <section class="py-5">
+      <div class="container">
+          <div class="row g-4">
+              <!-- Formulaire de Contact -->
+              <div class="col-lg-6" data-aos="fade-right">
+                  <div class="contact-form">
+                      <h2 class="mb-4">Envoyez-nous un message</h2>
+                      <form id="contactForm" novalidate>
+                          <div class="mb-3">
+                              <label for="nom" class="form-label">Nom</label>
+                              <input type="text" class="form-control" id="nom" required>
+                              <div class="invalid-feedback">
+                                  Veuillez saisir votre nom
+                              </div>
+                          </div>
+                          <div class="mb-3">
+                              <label for="email" class="form-label">Email</label>
+                              <input type="email" class="form-control" id="email" required>
+                              <div class="invalid-feedback">
+                                  Veuillez saisir une adresse email valide
+                              </div>
+                          </div>
+                          <div class="mb-3">
+                              <label for="message" class="form-label">Message</label>
+                              <textarea class="form-control" id="message" rows="5" required></textarea>
+                              <div class="invalid-feedback">
+                                  Veuillez saisir votre message
+                              </div>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Envoyer</button>
+                      </form>
+                      <!-- Alerte de confirmation -->
+                      <div id="successMessage" class="alert alert-success mt-3 d-none" role="alert">
+                          Votre message a été envoyé avec succès !
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Carte et Informations -->
+              <div class="col-lg-6" data-aos="fade-left">
+                  <div class="map-container mb-4">
+                      <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15836.290074231953!2d-6.377117635607634!3d32.31900379470314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sma!4v1736942032553!5m2!1sfr!2sma"
+                          width="100%"
+                          height="100%"
+                          style="border:0;"
+                          allowfullscreen=""
+                          loading="lazy">
+                      </iframe>
+                  </div>
+                  <br>
+                  <div class="contact-info">
+                      <h3>Nos Coordonnées</h3>
+                      <p><i class="bi bi-geo-alt-fill"></i> 123 Rue Example, 75000 BENI MELLAL</p>
+                      <p><i class="bi bi-telephone-fill"></i> +212 53 45 67 89</p>
+                      <p><i class="bi bi-envelope-fill"></i> contact@onehope.com</p>
+                      <div class="social-links mt-4">
+                          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                          <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+  <!-- commentaire -->
+  <body class="bg-light">
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Commentaires</h1>
+        
+        <div class="row">
+            <div class="col-md-8">
+                <div class="comment-form">
+                    <h2 class="mb-4">Laissez un commentaire</h2>
+                    <form id="commentForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Write your comment..." required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <p class="mb-2">Your rating:</p>
+                            <div class="rating">
+                                <input type="radio" name="rating" id="star5" value="5">
+                                <label for="star5"></label>
+                                <input type="radio" name="rating" id="star4" value="4">
+                                <label for="star4"></label>
+                                <input type="radio" name="rating" id="star3" value="3">
+                                <label for="star3"></label>
+                                <input type="radio" name="rating" id="star2" value="2">
+                                <label for="star2"></label>
+                                <input type="radio" name="rating" id="star1" value="1">
+                                <label for="star1"></label>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Comment</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <h2>Commentaires récents</h2>
+                <div class="recent-comment">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="mb-1">Jawad</h5>
+                        <div>
+                            <span class="star-filled">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="mb-1">hello wooo</p>
+                    <small class="comment-date">16/01/2025</small>
+                </div>
+                <div class="recent-comment">
+                  <div class="d-flex justify-content-between align-items-start">
+                      <h5 class="mb-1">Wiam</h5>
+                      <div>
+                          <span class="star-filled">★★★★★</span>
+                      </div>
+                  </div>
+                  <p class="mb-1">hello wooo</p>
+                  <small class="comment-date">16/01/2025</small>
+              </div>
+              <div class="recent-comment">
+                <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="mb-1">khadija</h5>
+                    <div>
+                        <span class="star-filled">★★★★★</span>
+                    </div>
+                </div>
+                <p class="mb-1">hello wooo</p>
+                <small class="comment-date">16/01/2025</small>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="success-message" id="successMessage">
+        <h5 class="mb-1">Comment submitted!</h5>
+        <p class="mb-0">Thank you for your feedback</p>
+    </div>
+
+
+  
+
+  <footer style="background-color: #1a1a1a; color: #fff; padding: 20px 0; text-align: center;">
+    <div class="container">
+      <!-- Logo -->
+      <div class="mb-3">
+        <img src="images/logo.png" alt="One Hope Logo" style="width: 50px; ">
+      </div>
+  
+      <!-- Social Links -->
+      <div class="mb-3">
+        <a href="https://github.com" target="_blank" style="color: #fff; text-decoration: none; margin: 0 15px; font-size: 1.2rem;">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+        <a href="https://linkedin.com" target="_blank" style="color: #fff; text-decoration: none; margin: 0 15px; font-size: 1.2rem;">
+          <i class="bi bi-linkedin"></i> LinkedIn
+        </a>
+      </div>
+  
+      <!-- Copyright -->
+      <p style="font-size: 0.9rem; color: #aaa;">
+        ALL rights reserved web design by One Hope
+      </p>
+    </div>
+  </footer>
+  
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

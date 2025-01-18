@@ -1,3 +1,18 @@
+header{
+    background-color: rgb(204, 197, 185);
+}
+
+#myHeaderButton{
+    background-color: rgb(255, 252, 242);
+    color: rgb(37, 36, 34);
+    font-style: oblique;
+}
+
+#myHeaderButton:hover{
+    background-color: rgb(64, 61, 57);
+    color: rgb(204, 197, 185);
+}
+
 .hero-section {
     position: relative;
     height: 40vh;
@@ -93,7 +108,6 @@
   }
  
 
-  /* Style général pour le cadre */
  
   /* Style général pour le cadre */
   .comment-form {
